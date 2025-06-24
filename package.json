@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "clean": "rm -rf .parcel-cache dist",
+    "start:client": "parcel src/index.html",
+    "start:server": "nodemon --watch server --ignore src/ --ignore dist/ server/index.js",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "build": "parcel build src/index.html",
+    "start": "parcel index.html"
+    
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "nodemon": "^3.1.10",
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "express": "^4.21.0"
+  }
+}
